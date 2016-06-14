@@ -1,33 +1,19 @@
-var path = require('path');
+/**
+ * @author: @AngularClass
+ */
 
-
-module.exports = {
-    entry: [
-        path.resolve('app/app.ts')
-    ],
-    output: {
-        path: path.resolve('www/build/js'),
-        filename: 'app.bundle.js'
-    },
-    module: {
-        loaders: [
-            {
-                test: /\.ts$/,
-                loader: 'awesome-typescript',
-                query: {
-                    doTypeCheck: true,
-                    resolveGlobs: false,
-                    externals: ["typings/browser.d.ts"]
-                },
-                include: path.resolve('app'),
-                exclude: /node_modules/
-            }
-        ]
-    },
-    resolve: {
-        alias: {
-            'angular2': path.resolve('node_modules/angular2')
-        },
-        extensions: ['', '.js', '.ts']
-    }
-};
+// Look in ./config folder for webpack.dev.js
+switch (process.env.NODE_ENV) {
+    case 'prod':
+    case 'production':
+        module.exports = require('./config/webpack.prod');
+        break;
+    case 'test':
+    case 'testing':
+        module.exports = require('./config/webpack.test');
+        break;
+    case 'dev':
+    case 'development':
+    default:
+        module.exports = require('./config/webpack.dev');
+}
