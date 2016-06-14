@@ -64,7 +64,7 @@ module.exports = webpackMerge(commonConfig, {
      *
      * See: http://webpack.github.io/docs/configuration.html#output-path
      */
-    path: helpers.root('dist'),
+    path: helpers.root('www/build/js'),
 
     /**
      * Specifies the name of each output file on disk.
@@ -142,7 +142,7 @@ module.exports = webpackMerge(commonConfig, {
       aggregateTimeout: 300,
       poll: 1000
     },
-    outputPath: helpers.root('dist')
+    outputPath: helpers.root('www/build/js')
   },
 
   /*
