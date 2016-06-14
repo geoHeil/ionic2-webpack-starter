@@ -18,6 +18,8 @@ This seed repo serves as an Ionic 2 starter for anyone looking to get up and run
 
 ### TODO's
   - set up this README to fully support the quickstart section
-  - fully integrate webpack
+  - fully integrate webpack / fix the errors
+  - port coding best practices
+  - enable HMR
   - when finished with build / testing setup integrate some smart code quality checks
   - afterwards add redux
