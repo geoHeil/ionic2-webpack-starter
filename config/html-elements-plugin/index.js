@@ -1,4 +1,3 @@
-
 function HtmlElementsPlugin(locations) {
   this.locations = locations;
 }
