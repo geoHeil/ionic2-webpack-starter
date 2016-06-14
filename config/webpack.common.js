@@ -219,7 +219,7 @@ module.exports = {
      * See: https://www.npmjs.com/package/copy-webpack-plugin
      */
     new CopyWebpackPlugin([{
-      from: 'src/assets',
+      from: 'resources',
       to: 'assets'
     }]),
 
