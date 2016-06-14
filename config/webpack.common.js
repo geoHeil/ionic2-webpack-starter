@@ -166,7 +166,7 @@ module.exports = {
       {
         test: /\.html$/,
         loader: 'raw-loader',
-        exclude: [helpers.root('src/index.html')]
+        exclude: [helpers.root('www/index.html')]
       }
 
     ]
@@ -232,7 +232,7 @@ module.exports = {
      * See: https://github.com/ampedandwired/html-webpack-plugin
      */
     new HtmlWebpackPlugin({
-      template: 'src/index.html',
+      template: 'www/index.html',
       chunksSortMode: 'dependency'
     }),
 
