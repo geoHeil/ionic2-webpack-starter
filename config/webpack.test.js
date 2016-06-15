@@ -41,9 +41,9 @@ module.exports = {
     extensions: ['', '.ts', '.js'],
 
     /**
-     * Make sure root is src
+     * Make sure root is app
      */
-    root: helpers.root('src'),
+    root: helpers.root('app'),
 
   },
 
@@ -159,7 +159,7 @@ module.exports = {
        */
       {
         test: /\.(js|ts)$/, loader: 'istanbul-instrumenter-loader',
-        include: helpers.root('src'),
+        include: helpers.root('app'),
         exclude: [
           /\.(e2e|spec)\.ts$/,
           /node_modules/
@@ -208,7 +208,7 @@ module.exports = {
   tslint: {
     emitErrors: false,
     failOnHint: false,
-    resourcePath: 'src'
+    resourcePath: 'app'
   },
 
   /**

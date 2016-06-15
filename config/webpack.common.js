@@ -70,8 +70,8 @@ module.exports = {
      */
     extensions: ['', '.ts', '.js'],
 
-    // Make sure root is src
-    root: helpers.root('src'),
+    // Make sure root is app
+    root: helpers.root('app'),
 
     // remove other default values
     modulesDirectories: ['node_modules'],
